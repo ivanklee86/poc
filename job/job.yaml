@@ -10,6 +10,7 @@ spec:
     metadata:
       name: hello-world-job
     spec:
+      completions: 1
       containers:
       - name: hello-world
         image: centos:7
