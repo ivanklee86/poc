@@ -17,5 +17,5 @@ spec:
         command:
          - "bin/bash"
          - "-c"
-         - "echo hello world 4"
+         - "echo hello world 5"
       restartPolicy: Never
