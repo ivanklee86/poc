@@ -2,6 +2,9 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: hello-world-job
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     metadata:
@@ -13,5 +16,5 @@ spec:
         command:
          - "bin/bash"
          - "-c"
-         - "echo hello world"
+         - "echo hello world 2"
       restartPolicy: Never
