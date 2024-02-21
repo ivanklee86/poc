@@ -4,7 +4,7 @@ metadata:
   name: hello-world-job
   annotations:
     argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     metadata:
@@ -17,5 +17,5 @@ spec:
         command:
          - "bin/bash"
          - "-c"
-         - "echo hello world 3"
+         - "echo hello world 4"
       restartPolicy: Never
